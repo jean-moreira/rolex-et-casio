@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Orbitron:wght@600&family=Press+Start+2P&family=Raleway:wght@300&family=Sacramento&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.clockMainClass {
+  width: 80%;
+  /* min-height: auto; */
+  height: 70vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* flex: 1.5; */
+}
+.clockSection {
+  display: flex;
+  align-items: center;
+  height: 7vh;
+  width: 100%;
+}
+/*  */
+/* appearence and details of the clock */
+.horlogeBoite {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: #66bfbffa;
+  border: 5px solid lightgoldenrodyellow;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  width: 22em;
+  height: 22em;
+  border-radius: 50%;
+}
+
+/* taking the and the center into the clock */
+
+.horlogeBoite img {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  left: 50%;
+  top: 40px;
+  transform: translate(-50%);
+  z-index: 2;
+}
+
+.centreHorloge {
+  position: absolute;
+  background-color: darkgreen;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  color: black;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 2px 20px;
+  z-index: 4;
+}
+
+/* styling all numbers CHANGE THE FONT TYPE LATER ON */
+
+.nombres div {
+  position: absolute;
+  font-size: 35px;
+  font-weight: bold;
+  color: lightgoldenrodyellow;
+}
+
+/* positionning the number individually */
+
+.douze {
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.trois {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.neuf {
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.six {
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* creating and styling arrows  */
+
+.fleche {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.fleche div {
+  background-color: white;
+  width: 7px;
+  height: 120px;
+  position: absolute;
+  transform-origin: bottom center;
+  bottom: 50%;
+  border-radius: 50% 50% 0 0;
+  z-index: 3;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* adjust each one invididually */
+
+.hour {
+  height: 90px;
+  transform: rotate(30deg);
+}
+.minute {
+  height: 200px;
+  transform: rotate(200deg);
+}
+.fleche .seconde {
+  height: 90px;
+  transform: rotate(50deg);
+  background-color: goldenrod;
+  transform: rotate(100deg);
+}
+
+/* second horloge  */
+
+.horlogeBoite2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: rgba(5, 15, 35, 1);
+  border: 5px solid lightgray;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  width: 25em;
+  height: 18em;
+  border-radius: 15%;
+}
+.contourBlanc {
+  position: absolute;
+  background-color: inherit;
+  border: 2px solid lightgray;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  width: 21.25em;
+  height: 15.39em;
+  border-radius: 10%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.horlogeBoite3 {
+  position: absolute;
+  border-radius: 5px;
+  width: 60%;
+  height: 40%;
+  box-shadow: inset 0px 0px 8px rgba(238, 238, 238, 0.4);
+  background-color: rgb(47, 47, 47, 0.75);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.casioImg {
+  position: absolute;
+  height: 20px;
+  width: auto;
+  left: 20%;
+  top: 17%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.heureMinSec {
+  position: absolute;
+  top: 57%;
+  right: 25%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+#hourMinText {
+  font-size: 40px;
+  color: #cbcbcbb7;
+  font-family: "Orbitron", arial;
+  padding-right: 6px;
+}
+#secondText {
+  font-size: 28.5px;
+  color: #cbcbcbb7;
+  font-family: "Orbitron", arial;
+}
+.day2 p {
+  font-size: 30px;
+  color: #cbcbcbb7;
+  font-family: "Orbitron", arial;
+}
+.day2 {
+  position: absolute;
+  top: 38%;
+  right: 25%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.AMPM {
+  position: absolute;
+  top: 40%;
+  left: 28.5%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+}
+.AMPM p {
+  font-size: 22px;
+  color: #cbcbcbb7;
+  font-family: "Orbitron", arial;
+}
+.bell {
+  height: 13px;
+  width: auto;
+  z-index: 6;
+  position: absolute;
+  top: 34%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+}
+.battery {
+  height: 17px;
+  width: auto;
+  z-index: 6;
+  position: absolute;
+  top: 31%;
+  left: 24%;
+  transform: translate(-50%, -50%);
+  transform: rotate(90deg);
+}
+
+@media (max-width: 1100px) {
+  .clockSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clockMainClass {
+    flex-direction: column;
+    height: 80vh;
+    /* margin-bottom: 190px; */
+  }
+}
+@media (max-width: 650px) {
+  .clockProjetLinks {
+    width: 80%;
+  }
+  .horlogeBoite {
+    margin-bottom: 20px;
+  }
+  .clockMainClass {
+    flex-direction: row;
+    height: 80vh;
+    margin-bottom: 190px;
+  }
+  .contourBlanc {
+    width: 18em;
+    height: 11.5em;
+  }
+  .casioImg {
+    top: 10%;
+  }
+  #hourMinText {
+    font-size: 30px;
+  }
+  #secondText {
+    font-size: 21px;
+  }
+}
+@media (max-width: 500px) {
+  .clockProjetLinks {
+    width: 80%;
+    padding-top: none;
+    padding-bottom: none;
+  }
+  .horlogeBoite {
+    margin-bottom: 20px;
+    width: 19em;
+    height: 19em;
+  }
+  .clockMainClass {
+    flex-direction: row;
+    height: 80vh;
+    margin-bottom: 190px;
+  }
+
+  .contourBlanc {
+    width: 15em;
+    height: 11.5em;
+  }
+  .casioImg {
+    top: 10%;
+  }
+  #hourMinText {
+    font-size: 30px;
+  }
+  #secondText {
+    font-size: 21px;
+  }
+}
